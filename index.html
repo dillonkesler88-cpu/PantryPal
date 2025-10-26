@@ -61,19 +61,13 @@
                     <input type="date" id="itemExpiry" required>
                 </div>
                 <div class="form-group">
-                    <label for="itemCategory">Category (optional)</label>
-                    <select id="itemCategory">
-                        <option value="">Select category</option>
-                        <option value="dairy">Dairy</option>
-                        <option value="meat">Meat</option>
-                        <option value="vegetables">Vegetables</option>
-                        <option value="fruits">Fruits</option>
-                        <option value="grains">Grains</option>
-                        <option value="beverages">Beverages</option>
-                        <option value="snacks">Snacks</option>
-                        <option value="condiments">Condiments</option>
-                        <option value="other">Other</option>
-                    </select>
+                    <label for="itemCategory">Category</label>
+                    <div class="category-group">
+                        <select id="itemCategory" required class="category-group__select">
+                            <!-- Categories loaded dynamically from JavaScript -->
+                        </select>
+                        <button type="button" id="add-category-btn" class="btn-primary category-group__button" title="Add a new custom category for organizing your pantry items">+</button>
+                    </div>
                 </div>
                 <button type="submit" class="btn-primary">Add to Pantry</button>
             </form>
@@ -120,17 +114,8 @@
                 </div>
                 <div class="form-group">
                     <label for="editItemCategory">Category</label>
-                    <select id="editItemCategory">
-                        <option value="">Select category</option>
-                        <option value="dairy">Dairy</option>
-                        <option value="meat">Meat</option>
-                        <option value="vegetables">Vegetables</option>
-                        <option value="fruits">Fruits</option>
-                        <option value="grains">Grains</option>
-                        <option value="beverages">Beverages</option>
-                        <option value="snacks">Snacks</option>
-                        <option value="condiments">Condiments</option>
-                        <option value="other">Other</option>
+                    <select id="editItemCategory" required>
+                        <!-- Categories loaded dynamically from JavaScript -->
                     </select>
                 </div>
                 <div class="modal-buttons">
