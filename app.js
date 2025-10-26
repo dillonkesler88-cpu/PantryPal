@@ -462,4 +462,3 @@ class PantryPal {
 document.addEventListener('DOMContentLoaded', () => {
     window.pantryApp = new PantryPal();
 });
-
