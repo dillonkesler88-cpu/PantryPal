@@ -3,6 +3,7 @@ class PantryPal {
     constructor() {
         this.pantryItems = this.loadFromStorage();
         this.currentTab = 'pantry';
+        this.categories = this.loadCategories();
         this.init();
     }
 
@@ -12,6 +13,54 @@ class PantryPal {
         this.updateStats();
         this.generateRecipeSuggestions();
         this.setDefaultExpiryDate();
+        this.populateCategoryDropdowns();
+    }
+
+    loadCategories() {
+        const defaultCategories = [
+            'dairy',
+            'meat',
+            'vegetables',
+            'fruits',
+            'grains',
+            'beverages',
+            'snacks',
+            'condiments',
+            'other'
+        ];
+        
+        try {
+            const stored = localStorage.getItem('pantryPalCategories');
+            return stored ? JSON.parse(stored) : defaultCategories;
+        } catch (error) {
+            console.error('Error loading categories:', error);
+            return defaultCategories;
+        }
+    }
+
+    saveCategories() {
+        try {
+            localStorage.setItem('pantryPalCategories', JSON.stringify(this.categories));
+        } catch (error) {
+            console.error('Error saving categories:', error);
+            this.showMessage('Error saving categories. Please try again.', 'error');
+        }
+    }
+
+    populateCategoryDropdowns() {
+        const dropdowns = ['itemCategory', 'editItemCategory'];
+        
+        dropdowns.forEach(dropdownId => {
+            const select = document.getElementById(dropdownId);
+            if (!select) return;
+
+            select.innerHTML = `
+                <option value="">Select category</option>
+                ${this.categories.map(category => `
+                    <option value="${category}">${this.formatCategory(category)}</option>
+                `).join('')}
+            `;
+        });
     }
 
     setupEventListeners() {
@@ -38,8 +87,35 @@ class PantryPal {
             this.processReceipt();
         });
 
+        // Add custom category button
+        document.getElementById('add-category-btn').addEventListener('click', () => {
+            this.addCustomCategory();
+        });
+
         // Modal functionality
         this.setupModalEvents();
+    }
+
+    addCustomCategory() {
+        const categoryName = prompt('Enter a new category name:');
+        if (!categoryName) return;
+
+        const normalizedCategory = categoryName.toLowerCase().trim();
+        
+        if (normalizedCategory === '') {
+            this.showMessage('Category name cannot be empty', 'error');
+            return;
+        }
+
+        if (this.categories.includes(normalizedCategory)) {
+            this.showMessage('This category already exists', 'error');
+            return;
+        }
+
+        this.categories.push(normalizedCategory);
+        this.saveCategories();
+        this.populateCategoryDropdowns();
+        this.showMessage('New category added!', 'success');
     }
 
     setupModalEvents() {
@@ -462,3 +538,4 @@ class PantryPal {
 document.addEventListener('DOMContentLoaded', () => {
     window.pantryApp = new PantryPal();
 });
+
