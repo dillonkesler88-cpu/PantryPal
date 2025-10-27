@@ -93,7 +93,13 @@ Feel free to submit issues and enhancement requests!
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0). This means you must:
+
+- Give appropriate credit to the creator (Dill)
+- Use the work for non-commercial purposes only
+- Share any adaptations under the same license terms
+
+See the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
