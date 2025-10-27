@@ -13,15 +13,15 @@
             <p>Your smart pantry manager</p>
         </header>
 
-        <nav class="tabs">
-            <button class="tab-btn active" data-tab="pantry">My Pantry</button>
-            <button class="tab-btn" data-tab="add">Add Item</button>
-            <button class="tab-btn" data-tab="recipes">Recipes</button>
-            <button class="tab-btn" data-tab="receipt">Receipt</button>
+        <nav class="tabs" role="tablist">
+            <button class="tab-btn active" data-tab="pantry" role="tab" aria-selected="true" aria-controls="pantry">My Pantry</button>
+            <button class="tab-btn" data-tab="add" role="tab" aria-selected="false" aria-controls="add">Add Item</button>
+            <button class="tab-btn" data-tab="recipes" role="tab" aria-selected="false" aria-controls="recipes">Recipes</button>
+            <button class="tab-btn" data-tab="receipt" role="tab" aria-selected="false" aria-controls="receipt">Receipt</button>
         </nav>
 
         <!-- Pantry Tab -->
-        <div class="tab-content active" id="pantry">
+        <div class="tab-content active" id="pantry" role="tabpanel" aria-labelledby="pantry-tab">
             <div class="search-bar">
                 <input type="text" id="searchInput" placeholder="Search your pantry...">
             </div>
@@ -45,7 +45,7 @@
         </div>
 
         <!-- Add Item Tab -->
-        <div class="tab-content" id="add">
+        <div class="tab-content" id="add" role="tabpanel" aria-labelledby="add-tab" hidden>
             <form class="add-item-form" id="addItemForm">
                 <h2>Add New Item</h2>
                 <div class="form-group">
@@ -74,7 +74,7 @@
         </div>
 
         <!-- Recipes Tab -->
-        <div class="tab-content" id="recipes">
+        <div class="tab-content" id="recipes" role="tabpanel" aria-labelledby="recipes-tab" hidden>
             <h2>Recipe Suggestions</h2>
             <p>Based on items in your pantry:</p>
             <div class="recipe-suggestions" id="recipeSuggestions">
@@ -83,7 +83,7 @@
         </div>
 
         <!-- Receipt Tab -->
-        <div class="tab-content" id="receipt">
+        <div class="tab-content" id="receipt" role="tabpanel" aria-labelledby="receipt-tab" hidden>
             <h2>Receipt Scanner</h2>
             <p>Type in items from your receipt to add them quickly:</p>
             <div class="receipt-input">
@@ -129,4 +129,6 @@
     <script src="app.js"></script>
 </body>
 </html>
+
+
 
