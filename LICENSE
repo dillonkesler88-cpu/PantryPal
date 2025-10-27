@@ -1,52 +1,49 @@
-# Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+# PantryPal License
 
-By exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License ("Public License"). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.
-
-## Section 1 – Definitions
-
-a. **Adapted Material** means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor.
-
-b. **Copyright and Similar Rights** means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized.
-
-c. **NonCommercial** means not primarily intended for or directed towards commercial advantage or monetary compensation.
-
-d. **Share** means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.
-
-## Section 2 – License Grant
-
-Subject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:
-
-a. reproduce and Share the Licensed Material, in whole or in part, for NonCommercial purposes only; and
-
-b. produce, reproduce, and Share Adapted Material for NonCommercial purposes only.
-
-## Section 3 – License Conditions
-
-Your exercise of the Licensed Rights is expressly made subject to the following conditions:
-
-a. **Attribution** — You must:
-   - Give appropriate credit to the creator (Dill)
-   - Provide a link to this license
-   - Indicate if changes were made
-   - Retain all copyright notices
-
-b. **NonCommercial** — You may not use the material for commercial purposes.
-
-c. **ShareAlike** — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
-
-## Section 4 – Disclaimer of Warranties and Limitation of Liability
-
-a. Unless otherwise separately undertaken by the Licensor, to the extent possible, the Licensor offers the Licensed Material as-is and as-available, and makes no representations or warranties of any kind concerning the Licensed Material.
-
-b. To the extent possible, in no event will the Licensor be liable to You on any legal theory (including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of this Public License or use of the Licensed Material.
-
-## Section 5 – Term and Termination
-
-a. This Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, your rights under this Public License terminate automatically.
+**Copyright (c) 2025 Dillon Kesler**  
+All rights reserved.
 
 ---
 
-For more information about this license, visit:
-https://creativecommons.org/licenses/by-nc-sa/4.0/
+## 📜 License
 
-Copyright (c) 2025 Dill. All rights reserved.
+This project is licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)**.
+
+### ✅ You CAN:
+- Use this software for personal, educational, or non-profit purposes
+- View, study, and learn from the source code
+- Modify and adapt the code for non-commercial use
+- Share your modifications under the same license
+
+### ❌ You CANNOT:
+- Use this software for commercial purposes without permission
+- Remove attribution to Dillon Kesler
+- Distribute modifications under a different license
+
+### 📋 Requirements:
+- **Attribution**: You must give appropriate credit to **Dillon Kesler**, provide a link to the license, and indicate if changes were made
+- **NonCommercial**: Commercial use requires explicit written permission
+- **ShareAlike**: Derivative works must be licensed under identical terms
+
+---
+
+## 💼 Commercial Use
+
+Interested in using PantryPal commercially?  
+Contact: **[your-email@example.com]** for licensing options.
+
+---
+
+## 📖 Full Legal Text
+
+The complete legal text of this license can be found at:  
+**https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode**
+
+Human-readable summary:  
+**https://creativecommons.org/licenses/by-nc-sa/4.0/**
+
+---
+
+## ⚠️ Disclaimer
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING OUT OF THE USE OF THIS SOFTWARE.
