@@ -67,7 +67,11 @@ class PantryPal {
         // Tab navigation
         document.querySelectorAll('.tab-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
-                this.switchTab(e.target.dataset.tab);
+                e.preventDefault();
+                const tabName = e.target.getAttribute('data-tab');
+                if (tabName) {
+                    this.switchTab(tabName);
+                }
             });
         });
 
@@ -144,35 +148,37 @@ class PantryPal {
         });
     }
 
-    switchTab(tabName) {
-        // Update tab buttons
-        document.querySelectorAll('.tab-btn').forEach(btn => {
-            btn.classList.remove('active');
-            btn.setAttribute('aria-selected', 'false');
-        });
-        const activeTab = document.querySelector(`[data-tab="${tabName}"]`);
-        activeTab.classList.add('active');
-        activeTab.setAttribute('aria-selected', 'true');
+   switchTab(tabName) {
+    if (!tabName) return;
 
-        // Update tab content
-        document.querySelectorAll('.tab-content').forEach(content => {
-            content.classList.remove('active');
+    // Update tab buttons
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        const isActive = btn.getAttribute('data-tab') === tabName;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+
+    // Update tab content
+    document.querySelectorAll('.tab-content').forEach(content => {
+        const isActive = content.id === tabName;
+        content.classList.toggle('active', isActive);
+        if (isActive) {
+            content.removeAttribute('hidden');
+        } else {
             content.setAttribute('hidden', '');
-        });
-        const activeContent = document.getElementById(tabName);
-        activeContent.classList.add('active');
-        activeContent.removeAttribute('hidden');
-
-        this.currentTab = tabName;
-
-        // Update content based on tab
-        if (tabName === 'pantry') {
-            this.renderPantryItems();
-            this.updateStats();
-        } else if (tabName === 'recipes') {
-            this.generateRecipeSuggestions();
         }
+    });
+
+    this.currentTab = tabName;
+
+    // Update content based on tab (REMOVED DUPLICATE)
+    if (tabName === 'pantry') {
+        this.renderPantryItems();
+        this.updateStats();
+    } else if (tabName === 'recipes') {
+        this.generateRecipeSuggestions();
     }
+}
 
     addItem() {
         const name = document.getElementById('itemName').value.trim();
@@ -538,5 +544,10 @@ class PantryPal {
             this.showMessage('Error saving data. Please try again.', 'error');
         }
     }
+}
 
+// Initialize the app when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+    window.pantryApp = new PantryPal();
+});
 
