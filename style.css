@@ -5,16 +5,16 @@
 /* CSS Custom Properties for Easy Theming */
 :root {
     /* Color Palette */
-    --primary-gradient: linear-gradient(135deg, #6B5B95 0%, #88B0D3 100%);
-    --secondary-gradient: linear-gradient(135deg, #FF6B9D 0%, #FEC860 100%);
-    --success-color: #00C896;
-    --warning-color: #FFB800;
-    --danger-color: #FF6B6B;
-    --dark-color: #2C3E50;
+    --primary-gradient: linear-gradient(135deg, #4A3D77 0%, #5C8CB8 100%);
+    --secondary-gradient: linear-gradient(135deg, #E14B7A 0%, #FEB041 100%);
+    --success-color: #00A67D;
+    --warning-color: #D96C00;
+    --danger-color: #DC3545;
+    --dark-color: #1A2433;
     --light-color: #F8F9FA;
-    --text-primary: #2C3E50;
-    --text-secondary: #6C757D;
-    --text-light: #ADB5BD;
+    --text-primary: #1A2433;
+    --text-secondary: #475569;
+    --text-light: #64748B;
     
     /* Shadows */
     --shadow-xs: 0 2px 4px rgba(0, 0, 0, 0.04);
@@ -394,13 +394,14 @@ header p {
 .item-category {
     display: inline-block;
     font-size: 0.75rem;
-    color: var(--text-secondary);
+    color: var(--text-primary);
     text-transform: uppercase;
     letter-spacing: 1px;
     background: var(--light-color);
     padding: 4px 12px;
     border-radius: var(--radius-full);
-    font-weight: 600;
+    font-weight: 700;
+    border: 1px solid var(--text-light);
 }
 
 .item-details {
@@ -430,11 +431,13 @@ header p {
 .item-expiry.expired {
     color: white;
     background: var(--danger-color);
+    font-weight: 700;
 }
 
 .item-expiry.expiring-soon {
-    color: white;
+    color: #000000;
     background: var(--warning-color);
+    font-weight: 700;
 }
 
 .item-actions {
@@ -480,8 +483,9 @@ header p {
 }
 
 .btn-edit {
-    background: linear-gradient(135deg, #6B5B95, #88B0D3);
+    background: linear-gradient(135deg, #4A3D77, #5C8CB8);
     color: white;
+    font-weight: 700;
 }
 
 .btn-edit:hover {
@@ -490,8 +494,9 @@ header p {
 }
 
 .btn-delete {
-    background: linear-gradient(135deg, var(--danger-color), #FF9A9E);
+    background: linear-gradient(135deg, #DC3545, #E05D6F);
     color: white;
+    font-weight: 700;
 }
 
 .btn-delete:hover {
@@ -500,8 +505,9 @@ header p {
 }
 
 .btn-used {
-    background: linear-gradient(135deg, var(--success-color), #00E4A6);
+    background: linear-gradient(135deg, #00A67D, #00C896);
     color: white;
+    font-weight: 700;
 }
 
 .btn-used:hover {
