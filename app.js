@@ -148,14 +148,20 @@ class PantryPal {
         // Update tab buttons
         document.querySelectorAll('.tab-btn').forEach(btn => {
             btn.classList.remove('active');
+            btn.setAttribute('aria-selected', 'false');
         });
-        document.querySelector(`[data-tab="${tabName}"]`).classList.add('active');
+        const activeTab = document.querySelector(`[data-tab="${tabName}"]`);
+        activeTab.classList.add('active');
+        activeTab.setAttribute('aria-selected', 'true');
 
         // Update tab content
         document.querySelectorAll('.tab-content').forEach(content => {
             content.classList.remove('active');
+            content.setAttribute('hidden', '');
         });
-        document.getElementById(tabName).classList.add('active');
+        const activeContent = document.getElementById(tabName);
+        activeContent.classList.add('active');
+        activeContent.removeAttribute('hidden');
 
         this.currentTab = tabName;
 
@@ -532,10 +538,5 @@ class PantryPal {
             this.showMessage('Error saving data. Please try again.', 'error');
         }
     }
-}
 
-// Initialize the app when the page loads
-document.addEventListener('DOMContentLoaded', () => {
-    window.pantryApp = new PantryPal();
-});
 
