@@ -166,7 +166,7 @@ header p {
    ============================================ */
 .tabs {
     display: flex;
-    background: white;
+    background: #F1F5F9;
     border-radius: var(--radius-lg);
     padding: 6px;
     margin-bottom: var(--spacing-xl);
@@ -176,15 +176,15 @@ header p {
 
 .tab-btn {
     flex: 1;
-    padding: 14px 20px;
-    border: none;
+    padding: 16px 24px;
+    border: 2px solid transparent;
     background: transparent;
     border-radius: var(--radius-md);
     cursor: pointer;
-    font-weight: 600;
-    font-size: 0.95rem;
+    font-weight: 700;
+    font-size: 1rem;
     transition: all var(--transition-base);
-    color: var(--text-secondary);
+    color: var(--text-primary);
     position: relative;
     overflow: hidden;
 }
@@ -207,12 +207,18 @@ header p {
     color: white;
     box-shadow: var(--shadow-sm);
     transform: scale(1.02);
+    border-color: transparent;
 }
 
 .tab-btn:hover:not(.active) {
-    color: var(--text-primary);
-    background: var(--light-color);
+    background: white;
     transform: translateY(-1px);
+    border-color: #CBD5E1;
+}
+
+.tab-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(91, 74, 138, 0.4);
 }
 
 .tab-btn:active {
