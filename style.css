@@ -1,19 +1,20 @@
 /* ============================================
    PantryPal - Enhanced Modern Design System
+   CONTRAST FIXED VERSION
    ============================================ */
 
 /* CSS Custom Properties for Easy Theming */
 :root {
-    /* Color Palette */
-    --primary-gradient: linear-gradient(135deg, #4A3D77 0%, #5C8CB8 100%);
+    /* Color Palette - IMPROVED CONTRAST */
+    --primary-gradient: linear-gradient(135deg, #5B4A8A 0%, #6B9FCC 100%);
     --secondary-gradient: linear-gradient(135deg, #E14B7A 0%, #FEB041 100%);
-    --success-color: #00A67D;
-    --warning-color: #D96C00;
-    --danger-color: #DC3545;
+    --success-color: #059669;
+    --warning-color: #EA580C;
+    --danger-color: #DC2626;
     --dark-color: #1A2433;
     --light-color: #F8F9FA;
-    --text-primary: #1A2433;
-    --text-secondary: #475569;
+    --text-primary: #0F172A;
+    --text-secondary: #334155;
     --text-light: #64748B;
     
     /* Shadows */
@@ -327,7 +328,7 @@ header p {
 }
 
 /* ============================================
-   Pantry List
+   Pantry List - IMPROVED CONTRAST
    ============================================ */
 .pantry-list {
     display: grid;
@@ -372,12 +373,12 @@ header p {
 
 .pantry-item.expired {
     border-left-color: var(--danger-color);
-    background: linear-gradient(135deg, #FFF5F5, #FFFFFF);
+    background: linear-gradient(135deg, #FEE2E2, #FFFFFF);
 }
 
 .pantry-item.expiring-soon {
     border-left-color: var(--warning-color);
-    background: linear-gradient(135deg, #FFFBF0, #FFFFFF);
+    background: linear-gradient(135deg, #FEF3C7, #FFFFFF);
 }
 
 .item-header {
@@ -385,23 +386,23 @@ header p {
 }
 
 .item-name {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--text-primary);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #0F172A;
     margin-bottom: var(--spacing-xs);
 }
 
 .item-category {
     display: inline-block;
-    font-size: 0.75rem;
-    color: var(--text-primary);
+    font-size: 0.8125rem;
+    color: #1E293B;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    background: var(--light-color);
-    padding: 4px 12px;
+    letter-spacing: 0.5px;
+    background: #E2E8F0;
+    padding: 6px 14px;
     border-radius: var(--radius-full);
     font-weight: 700;
-    border: 1px solid var(--text-light);
+    border: 1px solid #CBD5E1;
 }
 
 .item-details {
@@ -409,35 +410,37 @@ header p {
     justify-content: space-between;
     align-items: center;
     margin-bottom: var(--spacing-md);
-    padding: var(--spacing-sm) 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: var(--spacing-md) 0;
+    border-top: 2px solid #E2E8F0;
+    border-bottom: 2px solid #E2E8F0;
 }
 
 .item-quantity {
-    font-size: 1rem;
-    color: var(--text-secondary);
-    font-weight: 500;
+    font-size: 1.0625rem;
+    color: #1E293B;
+    font-weight: 600;
 }
 
 .item-expiry {
-    font-size: 0.9rem;
-    font-weight: 600;
-    padding: 4px 12px;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    padding: 6px 14px;
     border-radius: var(--radius-full);
     background: var(--light-color);
 }
 
 .item-expiry.expired {
     color: white;
-    background: var(--danger-color);
+    background: #DC2626;
     font-weight: 700;
+    box-shadow: 0 2px 4px rgba(220, 38, 38, 0.3);
 }
 
 .item-expiry.expiring-soon {
-    color: #000000;
-    background: var(--warning-color);
+    color: #FFFFFF;
+    background: #EA580C;
     font-weight: 700;
+    box-shadow: 0 2px 4px rgba(234, 88, 12, 0.3);
 }
 
 .item-actions {
@@ -447,19 +450,19 @@ header p {
 }
 
 /* ============================================
-   Buttons
+   Buttons - IMPROVED CONTRAST
    ============================================ */
 .btn {
-    padding: 10px 18px;
+    padding: 12px 20px;
     border: none;
     border-radius: var(--radius-sm);
     cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: 600;
+    font-size: 0.9375rem;
+    font-weight: 700;
     transition: all var(--transition-fast);
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    box-shadow: var(--shadow-xs);
+    box-shadow: var(--shadow-sm);
     position: relative;
     overflow: hidden;
 }
@@ -483,7 +486,7 @@ header p {
 }
 
 .btn-edit {
-    background: linear-gradient(135deg, #4A3D77, #5C8CB8);
+    background: linear-gradient(135deg, #5B4A8A, #7C9FD6);
     color: white;
     font-weight: 700;
 }
@@ -494,7 +497,7 @@ header p {
 }
 
 .btn-delete {
-    background: linear-gradient(135deg, #DC3545, #E05D6F);
+    background: linear-gradient(135deg, #DC2626, #EF4444);
     color: white;
     font-weight: 700;
 }
@@ -505,7 +508,7 @@ header p {
 }
 
 .btn-used {
-    background: linear-gradient(135deg, #00A67D, #00C896);
+    background: linear-gradient(135deg, #059669, #10B981);
     color: white;
     font-weight: 700;
 }
@@ -517,23 +520,6 @@ header p {
 
 .btn:active {
     transform: scale(0.95);
-}
-
-/* ============================================
-   Forms
-   ============================================ */
-.category-group {
-    display: flex;
-    gap: var(--spacing-sm);
-}
-
-.category-group__select {
-    flex: 1;
-}
-
-.category-group__button {
-    padding: var(--spacing-sm) var(--spacing-md);
-    min-width: 45px;
 }
 
 /* ============================================
@@ -575,6 +561,7 @@ header p {
     font-size: 1rem;
     transition: all var(--transition-base);
     background: white;
+    color: var(--text-primary);
 }
 
 .form-group input:focus,
@@ -628,6 +615,24 @@ header p {
 
 .btn-primary:active {
     transform: scale(0.98);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #64748B, #94A3B8);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: var(--radius-sm);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
 /* ============================================
@@ -703,6 +708,7 @@ header p {
     margin-bottom: var(--spacing-lg);
     font-family: 'Courier New', monospace;
     transition: all var(--transition-base);
+    color: var(--text-primary);
 }
 
 .receipt-input textarea:focus {
@@ -794,16 +800,17 @@ header p {
 
 .btn-danger {
     flex: 1;
-    background: linear-gradient(135deg, var(--danger-color), #FF9A9E);
+    background: linear-gradient(135deg, var(--danger-color), #EF4444);
     color: white;
     border: none;
     padding: 12px 20px;
     border-radius: var(--radius-md);
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 700;
     transition: all var(--transition-base);
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    font-size: 0.9375rem;
 }
 
 .btn-danger:hover {
@@ -902,6 +909,58 @@ header p {
 }
 
 /* ============================================
+   Toast Notifications
+   ============================================ */
+.toast {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #059669;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    z-index: 10000;
+    animation: slideInRight 0.3s ease-out;
+    max-width: 300px;
+}
+
+.toast.error {
+    background: #DC2626;
+}
+
+.toast.warning {
+    background: #EA580C;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.toast.fade-out {
+    animation: fadeOut 0.3s ease-out forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+/* ============================================
    Responsive Design
    ============================================ */
 @media (max-width: 768px) {
@@ -957,6 +1016,13 @@ header p {
     
     .modal-buttons {
         flex-direction: column;
+    }
+    
+    .toast {
+        bottom: 1rem;
+        right: 1rem;
+        left: 1rem;
+        max-width: none;
     }
 }
 
@@ -1032,64 +1098,4 @@ header p {
     .tab-btn.active {
         border: 2px solid currentColor;
     }
-}
-/* ===================================
-   TOAST NOTIFICATIONS
-   =================================== */
-
-.toast {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  background: #10b981;
-  color: white;
-  padding: 1rem 1.5rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
-  font-weight: 500;
-  z-index: 10000;
-  animation: slideInRight 0.3s ease-out;
-  max-width: 300px;
-}
-
-.toast.error {
-  background: #ef4444;
-}
-
-.toast.warning {
-  background: #f59e0b;
-}
-
-@keyframes slideInRight {
-  from {
-    transform: translateX(400px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.toast.fade-out {
-  animation: fadeOut 0.3s ease-out forwards;
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-}
-
-@media (max-width: 480px) {
-  .toast {
-    bottom: 1rem;
-    right: 1rem;
-    left: 1rem;
-    max-width: none;
-  }
 }
